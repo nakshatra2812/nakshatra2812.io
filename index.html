@@ -1,189 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nakshatra | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nakshatra | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<style>
+:root {
+    --header-bg: #DDD5D5;
+    --body-bg: #EDEDED;
+    --text-dark: #2F2F2F;
+    --accent: #6B7280;
+}
 
-        body {
-            background: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: linear-gradient(135deg, #4e73df, #1cc88a);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+body {
+    background: var(--body-bg);
+    color: var(--text-dark);
+}
 
-        header h1 {
-            font-size: 40px;
-        }
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+nav h2 {
+    font-weight: 600;
+}
 
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #4e73df;
-            font-size: 28px;
-        }
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-        .about p {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-        }
+nav a:hover {
+    color: var(--accent);
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
+/* Resume Button */
+.resume-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: var(--header-bg);
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-        .skill-box {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            font-weight: 500;
-            transition: 0.3s;
-        }
+.resume-btn:hover {
+    background: #cfc7c7;
+}
 
-        .skill-box:hover {
-            background: #4e73df;
-            color: white;
-            transform: translateY(-5px);
-        }
+/* HEADER */
+header {
+    background: var(--header-bg);
+    text-align: center;
+    padding: 140px 20px 90px;
+}
 
-        .project-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+header h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
 
-        .project-card:hover {
-            transform: scale(1.03);
-        }
+header p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #555;
+}
 
-        .project-card h3 {
-            color: #1cc88a;
-            margin-bottom: 10px;
-        }
+/* SECTIONS */
+section {
+    padding: 90px 8%;
+}
 
-        .contact {
-            text-align: center;
-        }
+section h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
 
-        .contact a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            background: #4e73df;
-            transition: 0.3s;
-        }
+/* ABOUT */
+.about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+}
 
-        .contact a:hover {
-            background: #1cc88a;
-        }
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2e2e2e;
-            color: white;
-            margin-top: 40px;
-        }
+.skill-box {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: white;
+    transition: 0.3s;
+}
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 30px;
-            }
-        }
-    </style>
+.skill-box:hover {
+    background: #DDD5D5;
+}
+
+/* CARDS */
+.card {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #d4d4d4;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 1px solid #999;
+    color: black;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    background: #DDD5D5;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #DDD5D5;
+    font-size: 14px;
+}
+
+@media(max-width:768px){
+    header h1 {
+        font-size: 30px;
+    }
+    nav ul {
+        gap: 12px;
+        font-size: 14px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Nakshatra V S</h1>
-        <p>Pre-Final Year IT Student | Aspiring Data Analyst | Cloud Enthusiast</p>
-    </header>
+<nav>
+    <h2>Nakshatra</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
 
-    <section class="about">
-        <h2>About Me</h2>
+        <!-- Resume Button -->
+        <li>
+            <a href="Nakshatra_Resume.pdf" download="Nakshatra_Resume.pdf" target=""D:\NAKSHATRA_RESUME.pdf"" class="resume-btn">
+                Download Resume
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Nakshatra V S</h1>
+    <p>Pre-Final Year IT Student | Aspiring Data Analyst | Cloud Enthusiast</p>
+</header>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a third-year Information Technology student passionate about
+        Data Analytics and Cloud Computing. I possess strong communication,
+        leadership, and problem-solving skills and enjoy developing real-world applications.
+    </p>
+</section>
+
+<section id="internships">
+    <h2>Internships</h2>
+
+    <div class="card">
+        <h3>Python Intern</h3>
+        <p>Worked on real-time application development and automation scripts using Python.</p>
+    </div>
+
+    <div class="card">
+        <h3>Artificial Intelligence Intern</h3>
+        <p>Built machine learning models and worked with data preprocessing techniques.</p>
+    </div>
+
+    <div class="card">
+        <h3>Cybersecurity Intern</h3>
+        <p>Learned application security, vulnerability testing, and secure coding practices.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">Data Analysis</div>
+        <div class="skill-box">Cloud Computing</div>
+        <div class="skill-box">Artificial Intelligence</div>
+        <div class="skill-box">Cybersecurity</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">Problem Solving</div>
+        <div class="skill-box">Leadership</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Safety Monitoring and Alert System</h3>
         <p>
-            I am a third-year Information Technology student at Panimalar Engineering College. 
-            I am an aspiring Data Analyst passionate about Cloud Computing and developing 
-            real-world applications that solve practical problems.
-            I possess strong communication, leadership, and problem-solving skills 
-            and have completed internships in Python, Artificial Intelligence, 
-            and Cybersecurity.
+            A mobile application that enhances personal safety using shake detection
+            and scream detection. It sends live GPS location and alerts emergency contacts.
         </p>
-    </section>
+    </div>
+</section>
 
-    <section>
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill-box">Python</div>
-            <div class="skill-box">SQL</div>
-            <div class="skill-box">Data Analysis</div>
-            <div class="skill-box">Cloud Computing</div>
-            <div class="skill-box">Artificial Intelligence</div>
-            <div class="skill-box">Cybersecurity</div>
-            <div class="skill-box">HTML</div>
-            <div class="skill-box">CSS</div>
-            <div class="skill-box">Problem Solving</div>
-            <div class="skill-box">Leadership</div>
-        </div>
-    </section>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: nakshatra2812@gmail.com</p>
 
-    <section>
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Safety Monitoring and Alert System</h3>
-            <p>
-                A mobile application that enhances personal safety using shake detection 
-                and automatic scream detection. When triggered, it sends live GPS location, 
-                alerts emergency contacts, and activates a siren for immediate help.
-            </p>
-        </div>
-    </section>
+    <!-- Replace with your real LinkedIn link -->
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank">
+        LinkedIn
+    </a>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: nakshatra2812@gmail.com</p>
-        <a href="https://www.linkedin.com/in/nakshatra-vs-4180902b9">LinkedIn</a>
-        <a href="https://github.com/nakshatra2812">GitHub</a>
-    </section>
+    <!-- Replace with your real GitHub link -->
+    <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">
+        GitHub
+    </a>
+</section>
 
-    <footer>
-        © 2026 Nakshatra V S | Portfolio
-    </footer>
+<footer>
+    © 2026 Nakshatra V S | Portfolio
+</footer>
 
 </body>
 </html>
