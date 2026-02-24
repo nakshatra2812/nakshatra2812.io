@@ -1,28 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Nakshatra | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4e73df;
+            font-size: 28px;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill-box {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            background: #4e73df;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-card h3 {
+            color: #1cc88a;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background: #4e73df;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: #1cc88a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2e2e2e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, I'm Nakshatra.v.s</h1>
-    <p>pursuing pre-final year</p>
 
-    <h2>About me </h2>
-    <p>I am Nakshatra,a third year Information Technology student at panimalar engineering college.
-    I am Aspiring data analyst and passionate about cloud computing and developing real-world application that slove practical problems.
-    I possess strong communication, leadership, and problem-solving skills, which help me work effectively in team environments. 
-      I have completed internships in Python, Artificial Intelligence, and Cybersecurity, where I gained hands-on experience in building and securing applications.
-      I am currently seeking internship opportunities to apply my technical knowledge,enhance my skills,and gain valuable industry experience.</p>
+    <header>
+        <h1>Nakshatra V S</h1>
+        <p>Pre-Final Year IT Student | Aspiring Data Analyst | Cloud Enthusiast</p>
+    </header>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>SAFETY MONITORING AND ALERT SYSTEM</li>
-        <p>Safety Monitoring and Alert System is a mobile application that enhances personal safety using shake detection and
-automatic scream detection. When triggered, it sends live GPS location, alerts emergency contacts, and activates a siren
-for immediate help.</p>
-    </ul>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a third-year Information Technology student at Panimalar Engineering College. 
+            I am an aspiring Data Analyst passionate about Cloud Computing and developing 
+            real-world applications that solve practical problems.
+            I possess strong communication, leadership, and problem-solving skills 
+            and have completed internships in Python, Artificial Intelligence, 
+            and Cybersecurity.
+        </p>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: nakshatra2812@gmail.com</p>
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-box">Python</div>
+            <div class="skill-box">SQL</div>
+            <div class="skill-box">Data Analysis</div>
+            <div class="skill-box">Cloud Computing</div>
+            <div class="skill-box">Artificial Intelligence</div>
+            <div class="skill-box">Cybersecurity</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">Problem Solving</div>
+            <div class="skill-box">Leadership</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Safety Monitoring and Alert System</h3>
+            <p>
+                A mobile application that enhances personal safety using shake detection 
+                and automatic scream detection. When triggered, it sends live GPS location, 
+                alerts emergency contacts, and activates a siren for immediate help.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: nakshatra2812@gmail.com</p>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-github-username" target="_blank">GitHub</a>
+    </section>
+
+    <footer>
+        © 2026 Nakshatra V S | Portfolio
+    </footer>
+
 </body>
 </html>
